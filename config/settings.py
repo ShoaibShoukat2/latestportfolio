@@ -10,7 +10,10 @@ SECRET_KEY = os.environ.get(
 
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+ALLOWED_HOSTS = os.environ.get(
+    "DJANGO_ALLOWED_HOSTS",
+    "localhost,127.0.0.1,shoaibshoukat987.pythonanywhere.com",
+).split(",")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -82,11 +85,15 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# CORS — localhost for dev, add deployed frontend URL when available
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:4173",
     "http://127.0.0.1:4173",
+    # Add your deployed frontend URL here once deployed, e.g.:
+    # "https://yourname.github.io",
+    # "https://your-frontend.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
