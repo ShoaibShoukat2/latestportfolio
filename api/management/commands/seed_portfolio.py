@@ -3,7 +3,7 @@ from api.models import Profile, Skill, Experience, Project, Education
 
 
 class Command(BaseCommand):
-    help = "Seed portfolio content for Shoaib Shoukatha"
+    help = "Seed portfolio content for Shoaib Shoukat"
 
     def handle(self, *args, **options):
         Profile.objects.all().delete()
@@ -13,7 +13,7 @@ class Command(BaseCommand):
         Education.objects.all().delete()
 
         Profile.objects.create(
-            name="Shoaib Shoukatha",
+            name="Shoaib Shoukat",
             title="Full Stack Developer",
             tagline="I ship medical platforms, travel apps, booking systems, and AI agents — end to end.",
             about=(
@@ -117,6 +117,47 @@ class Command(BaseCommand):
         Project.objects.bulk_create(
             [
                 Project(
+                    title="TM Fouzy Travel & Tours",
+                    slug="tm-fouzy-travel-tours",
+                    category="travel",
+                    summary="Full-stack Umrah & Hajj agency platform with AI chatbot, live audio, and mobile app.",
+                    description=(
+                        "A complete Umrah & Hajj travel agency platform built from scratch — "
+                        "23+ page React frontend with a luxury design system, 50+ REST API endpoints "
+                        "in Django, and a React Native mobile app. Covers package listings, booking "
+                        "flows, passenger details, payment with screenshot upload, customer portal, "
+                        "and a full admin dashboard. Integrated Google Gemini AI chatbot, AviationStack "
+                        "real-time flight checker, Agora live audio sessions, Firebase push notifications, "
+                        "PDF invoice generation, QR-code rooming system for pilgrims, OTP registration, "
+                        "discount codes, blog, shop, and WhatsApp integration. Deployed on cPanel with "
+                        "Phusion Passenger, CORS, and SSL configuration."
+                    ),
+                    stack=[
+                        "React.js", "Tailwind CSS", "Django", "DRF", "SQLite",
+                        "React Native", "Expo", "Google Gemini", "Agora",
+                        "Firebase", "AviationStack API", "ReportLab", "cPanel",
+                    ],
+                    features=[
+                        "Umrah & Hajj package listing with filters",
+                        "Full booking flow — passenger details, room selection, payment",
+                        "Google Gemini AI travel assistant chatbot",
+                        "Real-time flight schedule checker (AviationStack API)",
+                        "Live audio sessions with Agora",
+                        "PDF invoice & receipt generation",
+                        "QR code rooming system for pilgrims",
+                        "OTP-based registration & document upload",
+                        "Admin dashboard with full CRUD",
+                        "React Native / Expo mobile app",
+                    ],
+                    live_url="https://tmfouzy.sg/",
+                    repo_url="",
+                    image_url="/images/projects/tm-fouzy-travel-tours.png",
+                    accent="#1D4E89",
+                    featured=True,
+                    year="2025",
+                    order=1,
+                ),
+                Project(
                     title="MediLink Live Consult",
                     slug="medilink-live-consult",
                     category="medical",
@@ -141,7 +182,7 @@ class Command(BaseCommand):
                     accent="#0E7490",
                     featured=True,
                     year="2025",
-                    order=1,
+                    order=2,
                 ),
                 Project(
                     title="Smagua Travels",
@@ -167,7 +208,7 @@ class Command(BaseCommand):
                     accent="#0369A1",
                     featured=True,
                     year="2025",
-                    order=2,
+                    order=3,
                 ),
                 Project(
                     title="Voyage Agency Desk",
@@ -193,7 +234,7 @@ class Command(BaseCommand):
                     accent="#B45309",
                     featured=True,
                     year="2024",
-                    order=3,
+                    order=4,
                 ),
                 Project(
                     title="Aether AI Agents",
@@ -219,7 +260,7 @@ class Command(BaseCommand):
                     accent="#0F766E",
                     featured=True,
                     year="2025",
-                    order=4,
+                    order=5,
                 ),
                 Project(
                     title="CareAssist Agent",
@@ -244,7 +285,7 @@ class Command(BaseCommand):
                     accent="#0E7490",
                     featured=True,
                     year="2025",
-                    order=5,
+                    order=6,
                 ),
                 Project(
                     title="Voyage Concierge Agent",
@@ -269,7 +310,7 @@ class Command(BaseCommand):
                     accent="#0369A1",
                     featured=True,
                     year="2024",
-                    order=6,
+                    order=7,
                 ),
             ]
         )
