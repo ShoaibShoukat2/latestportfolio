@@ -23,11 +23,11 @@ class Command(BaseCommand):
                 "I work across React frontends and Django backends — from API design and databases "
                 "to polished, responsive interfaces that feel professional in production."
             ),
-            email="hello@shoaib.dev",
-            phone="+923001234567",
+            email="shoaibshoukatbhatti99@gmail.com",
+            phone="+923110696252",
             location="Pakistan · Remote Worldwide",
-            github="https://github.com",
-            linkedin="https://www.linkedin.com/in/",
+            github="https://github.com/ShoaibShoukat2",
+            linkedin="https://www.linkedin.com/in/shoaib-shoukat-722999228/",
             twitter="https://x.com",
             resume_url="#",
             years_experience=5,
