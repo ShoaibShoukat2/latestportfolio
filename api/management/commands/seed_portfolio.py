@@ -202,7 +202,7 @@ class Command(BaseCommand):
                         "Availability calendar",
                         "Operator dashboard",
                     ],
-                    live_url="https://example.com",
+                    live_url="https://play.google.com/store/apps/details?id=com.samugatravels.app&pcampaignid=web_share",
                     repo_url="https://github.com",
                     image_url="/images/projects/smagua-travels.png",
                     accent="#0369A1",
